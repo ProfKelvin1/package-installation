@@ -59,11 +59,11 @@ sudo su - ec2-user
 ```
 
 ## To Deploy your application  / artifact
-### Use
+### Use need to paste your artifact in the webapp dir/folder
 ``` sh
 Using SSH Key for Authentication
 scp -i keyname.pem filename user@destination-IPaddress:/absolute-path
-scp -i key.pem maven-web-app.war ec2-user@54.147.134.171:/opt/tomcat9/webapps
+scp -i key.pem maven-web-app.war ec2-user@54.147.134.171:/opt/tomcat10/webapps
 
 Using Password Authentication
 scp filename username@destination-ipaddress:/absolute-path
