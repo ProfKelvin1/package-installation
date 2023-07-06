@@ -55,7 +55,7 @@ sudo ln -s /opt/tomcat10/bin/startup.sh /usr/bin/starttomcat
 sudo ln -s /opt/tomcat10/bin/shutdown.sh /usr/bin/stoptomcat
 
 starttomcat
-`sudo su - ec2-user`
+sudo su - ec2-user
 ```
 
 ## To Deploy your application  / artifact
@@ -63,16 +63,16 @@ starttomcat
 ``` sh
 Using SSH Key for Authentication
 scp -i keyname.pem filename user@destination-IPaddress:/absolute-path
-`scp -i key.pem maven-web-app.war ec2-user@54.147.134.171:/opt/tomcat9/webapps`
+scp -i key.pem maven-web-app.war ec2-user@54.147.134.171:/opt/tomcat9/webapps
 
 Using Password Authentication
 scp filename username@destination-ipaddress:/absolute-path
-`scp -r directoryname username@ipaddress:/home/ubuntu`
+scp -r directoryname username@ipaddress:/home/ubuntu
 
 To configure Password Authentication
-`vi /etc/ssh/sshd_config`    and search for Password Authentication and change to `Yes`
-`sudo systemctl restart sshd`    #reestart the Service so that your changes will be active
-`passwd ec2-user`    #to set new password for ec2-user
+vi /etc/ssh/sshd_config    and search for Password Authentication and change to `Yes`
+sudo systemctl restart sshd    #reestart the Service so that your changes will be active
+passwd ec2-user    #to set new password for ec2-user
 
 ```
 
