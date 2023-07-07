@@ -70,9 +70,9 @@ scp filename username@destination-ipaddress:/absolute-path
 scp -r directoryname username@ipaddress:/home/ubuntu
 
 To configure Password Authentication
-vi /etc/ssh/sshd_config    and search for Password Authentication and change to `Yes`
+sudo vi /etc/ssh/sshd_config    and search for Password Authentication and change to `Yes`
 sudo systemctl restart sshd    #reestart the Service so that your changes will be active
-passwd ec2-user    #to set new password for ec2-user
+sudo passwd ec2-user    #to set new password for ec2-user
 
 ```
 
