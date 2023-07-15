@@ -21,7 +21,7 @@ sudo yum update -y
 cd /opt 
 
 # install wget unzip git packages.
-sudo yum install git wget unzip -y
+sudo yum install git wget vim unzip -y
 
 # install Java  as a pre-requisite for tomcat to run.
 #list possible versions in yum package repo
