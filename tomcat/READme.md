@@ -57,6 +57,19 @@ starttomcat
 sudo su - ec2-user
 ```
 
+## Enable Manager app and create users & roles
+``` sh
+Go to this dir /opt/tomcat10/webapps/manager/META-INF
+vi to the context.xml and comment the line betwwen the <context> tag
+
+restart the tomcat server and check the web browser to see if the manager app is enabled.
+
+To create users and password
+vi to /opt/tomcat10/conf/tomcat-user.xml
+Restart your tomcat server again
+
+```
+
 ## To Deploy your application  / artifact
 ### Use need to paste your artifact in the webapp dir/folder
 ``` sh
