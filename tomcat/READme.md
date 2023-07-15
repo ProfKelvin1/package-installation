@@ -17,9 +17,8 @@
 # change hostname to tomcat
 sudo hostnamectl set-hostname tomcat
 sudo su - ec2-user
-sudo yum update
-cd /opt 
 sudo yum update -y
+cd /opt 
 
 # install wget unzip git packages.
 sudo yum install git wget unzip -y
