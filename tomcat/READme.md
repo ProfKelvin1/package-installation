@@ -65,7 +65,7 @@ vi to the context.xml and comment the line betwwen the <context> tag
 restart the tomcat server and check the web browser to see if the manager app is enabled.
 
 To create users and password
-vi to /opt/tomcat10/conf/tomcat-user.xml
+vi to /opt/tomcat10/conf/tomcat-users.xml
 Restart your tomcat server again
 
 ```
