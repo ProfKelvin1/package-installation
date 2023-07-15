@@ -88,7 +88,7 @@ sudo passwd ec2-user    #to set new password for ec2-user
 
 ```
 
-## NGINX webserver acts as a load balancer
+## NGINX webserver acts as a proxy server a.k.a load balancer
 ```sh
 events{
 worker_connections 1024;
@@ -110,4 +110,15 @@ location / {
 }       
 }
 }
+```
+
+
+```sh
+sudo nginx -t
+
+#and reload nginx will this command
+sudo nginx -s reload
+
+sudo setsebool -P httpd_can_network_connect true
+
 ```
