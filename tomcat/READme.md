@@ -88,3 +88,26 @@ sudo passwd ec2-user    #to set new password for ec2-user
 
 ```
 
+## NGINX webserver acts as a load balancer
+```sh
+events{
+worker_connections 1024;
+}
+http { keepalive_timeout 5;
+upstream tomcatServers  {
+        keepalive 50;
+        server 172.31.19.111:8080;
+        server 172.31.21.48:8080;
+}
+server  {
+        listen 80;
+location / {
+        proxy_set_header X-Real-lP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header        Host $host;
+        proxy_pass http://tomcatServers;
+}       
+}
+}
+```
