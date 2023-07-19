@@ -87,6 +87,17 @@ sudo systemctl restart sshd    #reestart the Service so that your changes will b
 sudo passwd ec2-user    #to set new password for ec2-user
 
 ```
+## NGINX webserver acts as a proxy server a.k.a load balancer
+sudo yum install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+cd /etc
+cd /etc | grep nginx
+
+cd nginx
+
+sudo vi nginx.conf
 
 ## NGINX webserver acts as a proxy server a.k.a load balancer
 ```sh
