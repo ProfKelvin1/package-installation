@@ -88,6 +88,7 @@ sudo passwd ec2-user    #to set new password for ec2-user
 
 ```
 ## NGINX Installation
+```sh
 T2.medium Redhat Server
 
 Open port 80 and 443 (HTTP & HTTPS)
@@ -102,7 +103,7 @@ cd /etc | grep nginx
 cd nginx
 
 sudo vi nginx.conf
-
+```
 ## NGINX webserver acts as a proxy server a.k.a load balancer
 ```sh
 events{
