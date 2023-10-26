@@ -66,6 +66,10 @@ restart the tomcat server and check the web browser to see if the manager app is
 
 To create users and password
 vi to /opt/tomcat10/conf/tomcat-users.xml
+
+Paste this on a new line (outside of multi-line comment
+<user username="admin" password="admin123" roles="manager-gui,admin-gui,manager-script"/>
+
 Restart your tomcat server again
 
 ```
