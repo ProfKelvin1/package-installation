@@ -24,6 +24,8 @@ sudo yum install java-11-openjdk -y
 ###  Add Jenkins Repository and key
 ```sh
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
 cd /etc/yum.repos.d/
 sudo curl -O https://pkg.jenkins.io/redhat-stable/jenkins.repo
 ```
